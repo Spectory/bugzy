@@ -1,3 +1,11 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
+<div>
+<% @comments.each_with_index do |c, i| %>
+  <div>
+    <%= i %>)
+    <%= c.text %>
+  </div>
+<% end %>
+</div>
 <img src="/bugzy-logo.png" alt="rss feed" />

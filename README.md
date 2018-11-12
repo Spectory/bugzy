@@ -1,5 +1,13 @@
 # Bugzy - The worst app ever...
 
+### Setup
+
+1. Make sure you use the ruby version defined at gemfile / .tools-versions
+2. run
+  - ./bin/rake db:create db:migrate db:seed
+  - ./bin/rails s
+3. visit http://localhost:3000/home/index
+
 ### Bug ideas
 
 Server:

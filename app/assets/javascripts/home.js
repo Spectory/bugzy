@@ -38,8 +38,8 @@ function run() {
   console.debug('home.addStar started');
 
   const bg = document.getElementById('star-bg');
-  const numOfStars = 100;
-      // Math.floor(Math.sqrt(bg.offsetHeight * bg.offsetWidth));
+  const numOfStars =
+      Math.floor(Math.sqrt(bg.offsetHeight * bg.offsetWidth));
   // BUG: can replace lodash with native code.
   _.times(numOfStars, addStar);
 

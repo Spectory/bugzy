@@ -4,7 +4,13 @@
     <title>Bugzy</title>
     <%= csrf_meta_tags %>
 
+    <!-- BUG: do we really need those extra fonts? -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <!-- BUG: do we really need those extra libs? -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"><script>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 

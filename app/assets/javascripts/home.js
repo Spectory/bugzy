@@ -26,10 +26,21 @@ function animateStars() {
   // BUG: Does this animation finish within a single animation frame?
   const stars = document.querySelectorAll('.star');
   stars.forEach((star) => {
+    // Change star style.
     const size = `${Math.random() * START_MAX_SIZE}px`;
     star.style.width = size;
     star.style.height = size;
     star.style.opacity = Math.random();
+    // Move the star.
+    const newTop = Number(star.style.top.split('px')[0]) + 1;
+    if (newTop < window.innerHeight) {
+      star.style.top = `${newTop}px`;
+    } else {
+      // Remove star when is out of screen.
+      star.parentNode.removeChild(star);
+      // Add a new star.
+      addStar();
+    }
   })
 }
 
@@ -38,8 +49,11 @@ function run() {
   console.debug('home.addStar started');
 
   const bg = document.getElementById('star-bg');
+  // I really wish to have many more stars, something like
+  // `Math.floor(Math.sqrt(bg.offsetHeight * bg.offsetWidth))`, but it hurts the
+  // performance :(
   const numOfStars =
-      Math.floor(Math.sqrt(bg.offsetHeight * bg.offsetWidth));
+      Math.floor(Math.sqrt(bg.offsetHeight));
   // BUG: can replace lodash with native code.
   _.times(numOfStars, addStar);
 

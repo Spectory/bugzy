@@ -7,10 +7,20 @@
 }
 
 .star {
-  background: #fff;
   width: 20px;
   height: 20px;
   border-radius: 50px;
   position: absolute;
   transition: all 1s ease-out;
+}
+
+// BUG: complex selectors can be simplified.
+.star:nth-child(3n) {
+  background: rgba(240, 229, 238, 1);
+}
+.star:nth-child(3n + 1) {
+  background: rgba(45, 0, 157, 1);
+}
+.star:nth-child(3n + 2) {
+  background: rgba(212, 0, 94, 0.5);
 }

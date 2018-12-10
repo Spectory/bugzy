@@ -1,5 +1,69 @@
+/*
+ TODO: We need to make this stink up performance -
+ https://snook.ca/archives/html_and_css/css-parent-selectors
+ https://medium.freecodecamp.org/how-to-write-truly-terrible-css-214c26c6f729
+ https://css-tricks.com/efficiently-rendering-css/
+*/
+
+* {
+  color: white;
+  font-size: 24px;
+}
+
+body {
+  padding: 16px;
+  margin: 0;
+  background-color: black;
+}
+
+// BUG: Use universal selectors instead of classes only.
+div {
+  color: white;
+  font-family: Lato;
+  font-size: 15px;
+}
+
+div > .main-wrapper {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+div > .header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  justify-content: space-evenly;
+}
+
+/* Get a really big image. */
+div > .image {
+  width: 300px;
+}
+
+div > .body {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+div > .technoligies-carusel {
+  align-items: center;
+  display: flex;
+}
+
+i {
+  color: white;
+}
+
+.material-icons.button {
+  cursor: pointer;
+  font-size: 48px;
+}
+
 #star-bg {
-  background: rgba(0,0,0,0.54);
   width: 100%;
   height: 100%;
   position: fixed;

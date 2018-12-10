@@ -1,12 +1,25 @@
-<div id="star-bg"></div>
-
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<div>
-<% @comments.each_with_index do |c, i| %>
-  <div>
-    <%= i %>)
-    <%= c.text %>
+<div class="main-wrapper">
+  <div id="star-bg"></div>
+  <div class="header">
+    <div class="title">Israel Israeli - Full stack Ninja Turtle</div>
+    <img class="image" src="https://melbournechapter.net/images/teenage-mutant-ninja-turtles-clipart-4.png">
+    <div class="description">
+      As a full stack developer for the last 2 and a half months I learned a lot about deploying great MVC, SPA, blochain, bitcoin applications. I love to work agiley BLA BLA BLA.
+    </div>
   </div>
-<% end %>
+  <div class="body">
+    <div class="technoligies-carusel">
+      <i class="material-icons button">keyboard_arrow_left</i>
+        Get all the images when the app loads
+      <i class="material-icons button">keyboard_arrow_right</i>
+    </div>
+  </div>
+  <div>
+  <% @comments.each_with_index do |c, i| %>
+    <div>
+      <%= i %>)
+      <%= c.text %>
+    </div>
+  <% end %>
+  </div>
 </div>
